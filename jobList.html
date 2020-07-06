@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job Seeker Admin-Job List</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="admin.css">
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#example').DataTable( {
+        columnDefs: [ {
+            targets: [ 0 ],
+            orderData: [ 0, 1 ]
+        }, {
+            targets: [ 1 ],
+            orderData: [ 1, 0 ]
+        }, {
+            targets: [ 4 ],
+            orderData: [ 4, 0 ]
+        } ]
+    } );
+} );
+/*$(document).ready(function() {
+    $('#example').DataTable( {
+        "order": [[ 3, "desc" ]]
+    } );
+} );*/
+    </script>
+</head>
+<body>
+    <nav class="navbar bg-color sticky-top">
+        <img src="p1.jpg" height="35" width="200">
+        <ul class="nav nav-tabs box-margin">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" >Job</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="employerList.html" style="color: aliceblue;">Employer</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: rgb(169, 195, 218)"><i class="fa fa-user-circle" style="font-size:24px"></i> Username</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="adminProfile.html"><i class="fa fa-user"></i> Profile</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                </div>
+            </li>
+          </ul>
+    </nav>
+    <div class="container admin-container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="addJob.html" class="btn btn-success"><i class="fa fa-plus-circle"></i> <span>Add New Job</span></a>
+                    </div>
+                    <div class="col-xs-6">
+                    </div>
+                </div>
+            </div>
+                <table id="example" class="display" style="width:100%">
+                    <thead class="thread-color">
+                        <tr>
+                            <th>Job Name</th>
+                            <th>Employer Name</th>
+                            <th>City</th>
+                            <th>Salary</th>
+                            <th>Posted Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/04/25</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/07/25</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2009/01/12</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/03/29</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2008/11/28</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/12/02</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/08/06</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2010/10/14</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2009/09/15</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2008/12/13</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2008/12/19</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2013/03/03</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2008/10/16</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/12/18</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2010/03/17</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/11/27</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2010/06/09</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2009/04/10</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/10/13</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2012/09/26</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/09/03</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2009/06/25</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/12/12</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2010/09/20</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Angelica Ramos</td>
+                            <td>Chief Executive Officer (CEO)</td>
+                            <td>London</td>
+                            <td>47</td>
+                            <td>2009/10/09</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Shou Itou</td>
+                            <td>Regional Marketing</td>
+                            <td>Tokyo</td>
+                            <td>20</td>
+                            <td>2011/08/14</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/06/02</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Suki Burks</td>
+                            <td>Developer</td>
+                            <td>London</td>
+                            <td>53</td>
+                            <td>2009/10/22</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/05/07</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Gavin Cortez</td>
+                            <td>Team Leader</td>
+                            <td>San Francisco</td>
+                            <td>22</td>
+                            <td>2008/10/26</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2011/03/09</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Unity Butler</td>
+                            <td>Marketing Designer</td>
+                            <td>San Francisco</td>
+                            <td>47</td>
+                            <td>2009/12/09</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Nursing Care</td>
+                            <td>Lorem ipsum</td>
+                            <td>Lorem ipsum</td>
+                            <td>150000</td>
+                            <td>2008/12/16</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Hope Fuentes</td>
+                            <td>Secretary</td>
+                            <td>San Francisco</td>
+                            <td>41</td>
+                            <td>2010/02/12</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Vivian Harrell</td>
+                            <td>Financial Controller</td>
+                            <td>San Francisco</td>
+                            <td>62</td>
+                            <td>2009/02/14</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Timothy Mooney</td>
+                            <td>Office Manager</td>
+                            <td>London</td>
+                            <td>37</td>
+                            <td>2008/12/11</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                        <tr>
+                            <td>Jackson Bradshaw</td>
+                            <td>Director</td>
+                            <td>New York</td>
+                            <td>65</td>
+                            <td>2008/09/26</td>
+                            <td>
+                                <a href="#viewModal" class="view" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="View" style="color: rgb(0, 110, 255);">&#xE417;</i></a> &nbsp;
+								<a href="updateJob.html" class="edit"><i class="material-icons icon-padding" title="Edit"  style="color: yellow;">&#xE254;</i></a> &nbsp;
+								<a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons icon-padding" data-toggle="tooltip" title="Delete"  style="color: red;">&#xE872;</i></a> &nbsp;
+							</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Job Name</th>
+                            <th>Employer Name</th>
+                            <th>City</th>
+                            <th>Salary</th>
+                            <th>Posted Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
+    </div>
+	<!-- Edit Modal HTML -->
+	<div id="viewModal" class="modal fade">
+		<div class="modal-dialog info-dialog">
+			<div class="modal-content">
+					<div class="modal-header">						
+						<h4 class="modal-title" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bolder;">Detail Information</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                        <ul class="list-group">
+                            <li class="list-group-item">Posted Date: 2020/6/</li>
+                            <li class="list-group-item">Employer Name: Lorem ipsum</li>
+                            <li class="list-group-item">Job Name: Nursing</li>
+                            <li class="list-group-item">Phone Number: +11-11-111-1111</li>
+                            <li class="list-group-item">Email: loremipsum@gmail.com</li>
+                            <li class="list-group-item">Address: No.00, Road/Street, City, Area</li>
+                            <li class="list-group-item">Employment Status: Full-time/Part-time</li>
+                            <li class="list-group-item">Minimum Salary: ------- Yen</li>
+                            <li class="list-group-item">Maximum Salary: ------- Yen</li>
+                            <li class="list-group-item">Working Days: - Days per Week</li>
+                            <li class="list-group-item">Working Hours: --:-- ~ --:--</li>
+                            <li class="list-group-item">Age Range: -- ~ -- years old</li>
+                            <li class="list-group-item">Japanese Skill: N3 and above</li>
+                            <li class="list-group-item">Job Description: Paragraph</li>
+                            <li class="list-group-item">
+                                Q1: ------.<br>
+                                A1: -------. 
+                            </li>
+                            <li class="list-group-item">
+                                Q2: ------.<br>
+                                A2: -------. 
+                            </li>
+                            <li class="list-group-item">
+                                Q3: ------.<br>
+                                A3: -------. 
+                            </li>
+                            <li class="list-group-item">Qualification: English Skill(intermediate), ...</li>
+                        </ul>		
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancel">
+                        <a href="updateJob.html"><button class="btn btn-warning">Edit</button></a>
+                        <a href="#deleteModal" data-toggle="modal"><button class="btn btn-danger" data-toggle="tooltip">Delete</button></a>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- Delete Modal HTML -->
+	<div id="deleteModal" class="modal fade">
+		<div class="modal-dialog del-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-weight: bolder;">Delete Job</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">					
+						<p>Are you sure you want to delete these Records?</p>
+						<p class="text-warning"><small>This action cannot be undone.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-danger" value="Delete">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <footer class="text-center">copyright &#169; Lorem ipsum</footer>
+</body>
+</html>
