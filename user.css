@@ -132,12 +132,6 @@ td{
       font-family: "Lucida Console", Courier, monospace;
 }
 
-hr.new1{
-    border-top: 1px solid rgb(3, 44, 134);
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-
 .head-style{
     font-weight: bolder;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -194,25 +188,32 @@ hr.new1{
 
 /*End Date Filter Select Box */
 
+li{
+  padding: 10px 5px 10px 5px;
+}
+
+hr.new1{
+  border-top: 1px solid rgb(3, 44, 134);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
 .req-title{
-    background-color: #4d80b9;
-    color: ivory;
+    height: 50px;
+    background-color: #cdd4dd;
+    color: rgb(92, 92, 87);
+    padding-top: 3%;
 }
 
 .detail-margin{
   margin: auto;
 }
 
-.table-column-color{
-    background-color: #76B7DE;
-    width: 35%;
-}
-
 .btn-apply{
     background-color: #7af706;
     color: rgb(4, 15, 24);
-    width: 30%;  
-    height: 20%;
+    width: 40%;  
+    height: 30%;
     font-family: "Comic Sans MS";
     font-style: italic bolder;
 }
@@ -410,3 +411,82 @@ hr.new1{
   display: flex;
   justify-content: left;
 }
+
+/* About */
+.about-h1
+{
+	color:rgb(56, 55, 55);
+  margin:auto;
+  padding-top: 5%;
+	font-weight:300;
+}
+
+.our-team-main
+{
+	width:100%;
+	height:auto;
+	border-bottom:5px #323233 solid;
+	background:#e8f2f3;
+	text-align:center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+}
+
+
+.our-team-main img
+{
+	border-radius:50%;
+	margin-bottom:20px;
+	width: 90px;
+}
+
+.our-team-main h3
+{
+	font-size:20px;
+	font-weight:700;
+}
+
+.our-team-main p
+{
+	margin-bottom:0;
+}
+
+.team-back
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:left;
+	background:#fff;
+}
+
+.team-front
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	padding:15px;
+	bottom:0px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover .team-front
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover
+{
+	border-color:#777;
+	transition:0.5s;
+}
+/* End About */
