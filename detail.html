@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job Seeker-Detail</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="user.css">
+
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</head>
+<body>
+  <nav class="navbar nav-color sticky-top">
+      <a href="main.html"><img src="p1.jpg" height="35" width="200" style="margin-left: 15px;"></a>
+      <button type="button" class="btn btn-primary btn-float signin" data-toggle="modal" data-target="#myModal">Sign In</button>
+  </nav> 
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content box1">
+        <div class="modal-header">
+          <h2 class="modal-title">Login</h2>
+          <button type="button" class="close" data-dismiss="modal" style="color:aliceblue">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <p class="text-white"> Please enter your login and password!</p> 
+                <input type="text" name="" placeholder="Username"> 
+                <input type="password" name="" placeholder="Password"> 
+                <p><a class="forgot text-white" href="#">Forgot password?</a></p>
+                <p class="text-white">Don't Have An Account? <a class="forgot" href="userSignup.html">Create Here!</a></p>
+                <input type="submit" name="" value="Login" href="#">
+            </form>
+        </div>
+        <d2 iv class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="color:aliceblue">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron text-left p-1" style="background-color: #90c0ffcb;">
+        <h2 class="head-style">Detail Information</h2>
+    </div>  
+
+  
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-5 detail-margin">
+                <h2 class="text-center job-title">Nursing Care</h2>
+                <hr class="new1">
+                <h4 class="head-style">Job Description</h4>
+                <p class="para">
+                    Whether you like fishing or not, you're welcome!  
+                    There are no difficulties at the cash register and in the item delivery. Occasionally, customers ask me specialized questions, but I'm relieved that the employees and senior staff will respond! 
+                    There is also a happy company discount for fishing lovers.
+                    Whether you like fishing or not, you're welcome!  
+                    There are no difficulties at the cash register and in the item delivery. Occasionally, customers ask me specialized questions, but I'm relieved that the employees and senior staff will respond! 
+                    There is also a happy company discount for fishing lovers.                  
+                </p>
+                <h4 class="head-style">Frequent Answer Question</h4>
+                <p class="para">
+                    Q: I have no experience or knowledge of this job, but is it okay? <br>
+                    A: of course it's okay! Most of the staff have zero knowledge and experience. <br>
+                    Q: this is my first time... to do? <br>
+                    A: no touch! We sell pre-packed bait, so you can touch it in the bag but don't touch it directly. <br>
+                    Q: is there flexibility in time and days? <br>
+                    A: yes! You can work at almost 100% of your desired shift. <br>
+                </p>
+            </div>
+            <div class="col-sm-6 detail-margin">
+              <span class="badge badge-light btn-float" style="margin-right:30px">Posted Date: 2020/6/20, 8:20</span>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td class="req-title job-title text-center" colspan="2"> <h3>Application Requirements</h3> </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Employment Status</td>
+                    <td class="table-primary">Full-Time</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Age Range</td>
+                    <td class="table-primary">23~25 years old</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Working Hours</td>
+                    <td class="table-primary">9:00~5:00</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Working Days</td>
+                    <td class="table-primary">5 days a week</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Minimum Salary</td>
+                    <td class="table-primary"> 60000 yen</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Maximum Salary</td>
+                    <td class="table-primary">150000 yen</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Working Place</td>
+                    <td class="table-primary">Hokkaidou, Sapporo</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Japanese Skill</td>
+                    <td class="table-primary">N2 and above</td>
+                  </tr>
+                  <tr>
+                    <td class="table-column-color">Qualification</td>
+                    <td class="table-primary">English skill: preintermediate and no experiences years...</td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr class="new1">
+              <h3 class="text-left job-title"><u>Contact</u></h3>
+              <p><b>Employer or Company Name:</b> Lorem ipsum </p>
+              <p><b>Address:</b> Hokkaido, Sapporo, ...</p>
+              <p><b>Email:</b> Lorem@ipsum.co.jp</p>
+              <p><b>Phone Number:</b> +00-11-000-1111</p>    
+            </div>
+        </div>
+    </div>
+    
+    <div class="center">
+      <button type="button" class="btn btn-apply">Apply Now</button>
+    </div>
+
+    <div class="jumbotron text-left p-5 foot-color" style="margin-bottom:0">
+        <h3>Contact</h3>
+        <table>
+            <tr>
+              <td>HAJ Empowerment Co., Ltd.</td>
+            </tr>
+            <tr>
+              <td><span class="fa fa-phone" style="font-size:20px"></span>:  +00-11-000-1111</td>
+              <td><span class="fa fa-globe" style="font-size:20px"></span>:  www.haj-emp.co.jp</td>
+              <td rowspan="2"><a href="#" class="fa fa-twitter"></a></td>
+              <td rowspan="2"><a href="#" class="fa fa-facebook fa-facebook-f"></a></td>
+            </tr>
+            <tr>
+              <td><span class="fa fa-envelope" style="font-size:20px"></span>:  jobseeker@dummy.jp</td>
+              <td><span class="fa fa-map-marker" style="font-size:20px"></span>:  Detail Address, Sapporo, JAPAN</td>
+            </tr>
+        </table>
+            <!--div class="btn-float" id="googleMap" style="width:100%;height:400px;"></div-->
+    </div>      
+  <footer class="text-center">copyright &#169; haj.co.jp</footer>
+</body>
+</html>
