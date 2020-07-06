@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job Seeker-Detail</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="user.css">
+
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Roboto');
+        /* Contact Us */
+        .container {
+            background: #FFFFFF;
+            width: 100%;
+            height: 550px;
+            margin: 5% auto;
+            position: relative;
+        }
+        .container .map {
+            width: 40%;
+            float: left;
+        }
+        .container .contact-form {
+            width: 58%;
+            margin-left: 2%;
+            float: left;
+        }
+        .container .contact-form .title {
+            font-size: 2.5em;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            color: #242424;
+            margin: 5% 8%;
+        }
+        .container .contact-form .subtitle {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 0 4% 5% 8%;
+        }
+        .container .contact-form input,
+        .container .contact-form textarea {
+            width: 90%;
+            padding: 3%;
+            margin: 2% 8%;
+            color: #242424;
+            border: 1px solid #B7B7B7;
+        }
+        .container .contact-form input::placeholder,
+        .container .contact-form textarea::placeholder {
+            color: #242424;
+        }
+        .container .contact-form .btn-send {
+            background: #4f86c5;
+            width: 180px;
+            height: 60px;
+            color: #FFFFFF;
+            font-weight: 700;
+            margin: 2% 8%;
+            border: none;
+        }
+        /* End Contact Us */
+    </style>
+</head>
+<body>
+  <nav class="navbar nav-color sticky-top">
+      <a href="main.html"><img src="p1.jpg" height="35" width="200" style="margin-left: 15px;"></a>
+      <button type="button" class="btn btn-primary btn-float signin" data-toggle="modal" data-target="#myModal">Sign In</button>
+  </nav> 
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content box1">
+        <div class="modal-header">
+          <h2 class="modal-title">Login</h2>
+          <button type="button" class="close" data-dismiss="modal" style="color:aliceblue">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <p class="text-white"> Please enter your login and password!</p> 
+                <input type="text" name="" placeholder="Username"> 
+                <input type="password" name="" placeholder="Password"> 
+                <p><a class="forgot text-white" href="#">Forgot password?</a></p>
+                <p class="text-white">Don't Have An Account? <a class="forgot" href="userSignup.html">Create Here!</a></p>
+                <input type="submit" name="" value="Login" href="#">
+            </form>
+        </div>
+        <d2 iv class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="color:aliceblue">Close</button>
+        </div>
+      </div>
+    </div>
+    
+    <h1 class="text-center about-h1">About Us</h1>
+
+	<div class="container" style="height: auto;">
+	    <div class="row">
+	
+	    <!--team-1-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/9c27b0/fff?text=Dilip" class="img-fluid" />
+	                <h3>Vision</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	        </div>
+	    </div>
+	    <!--team-1-->
+	
+	    <!--team-2-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/336699/fff?text=Dilip" class="img-fluid" />
+	                <h3>Mission</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	
+	        </div>
+	    </div>
+	    <!--team-2-->
+	
+	    <!--team-3-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/607d8b/fff?text=Dilip" class="img-fluid" />
+	                <h3>Join with Us</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	        </div>
+	    </div>
+	    <!--team-3-->
+	
+	    <!--team-4-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/4caf50/fff?text=Dilip" class="img-fluid" />
+	                <h3>Contact Information</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	        </div>
+	    </div>
+	    <!--team-4-->
+	
+	    <!--team-5-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/e91e63/fff?text=Dilip" class="img-fluid" />
+	                <h3>Address</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	
+	        </div>
+	    </div>
+	    <!--team-5-->
+	
+	    <!--team-6-->
+	    <div class="col-lg-4">
+	        <div class="our-team-main">
+	
+	            <div class="team-front">
+	                <img src="http://placehold.it/110x110/2196f3/fff?text=Dilip" class="img-fluid" />
+	                <h3>Information</h3>
+	            </div>
+	
+	            <div class="team-back">
+	                <span>
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque penatibus et magnis dis parturient montes,
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+	                    natoque.
+	                </span>
+	            </div>
+	
+	        </div>
+	    </div>
+        <!--team-6-->
+	    </div>
+	</div>
+
+    <div class="container">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112061.09262729759!2d77.208022!3d28.632485!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x644e33bc3def0667!2sIndior+Tours+Pvt+Ltd.!5e0!3m2!1sen!2sus!4v1527779731123" width="100%" height="650px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="contact-form">
+            <h1 class="title">Contact Us</h1>
+            <h2 class="subtitle">We are here assist you.</h2>
+            <form action="">
+                <input type="text" name="name" placeholder="Your Name" />
+                <input type="email" name="e-mail" placeholder="Your E-mail Adress" />
+                <input type="tel" name="phone" placeholder="Your Phone Number"/>
+                <textarea name="text" id="" rows="8" placeholder="Your Message"></textarea>
+                <button class="btn-send">Get a Call Back</button>
+            </form>
+        </div>
+    </div>
+    <footer class="text-center">copyright &#169; Lorem ipsum</footer>
+</body>
+</html>
